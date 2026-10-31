@@ -347,8 +347,8 @@ em { font-style: normal; }
 .final .lead { margin: 0; }
 
 .foot { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 28px; padding: 40px 16px 56px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); background: #eaf1fd; }
-.foot a:hover, .foot-link:hover { color: var(--ink); }
-.foot-link { background: none; border: 0; padding: 0; font: inherit; color: inherit; cursor: pointer; }
+.foot a:hover, .link-btn:hover { color: var(--ink); }
+.link-btn { background: none; border: 0; padding: 0; font: inherit; color: inherit; cursor: pointer; }
 
 /* Contato */
 .contact {

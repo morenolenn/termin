@@ -67,6 +67,9 @@
   let lang;
   try { lang = localStorage.getItem("termin-lang"); } catch {}
   lang ||= navigator.language.toLowerCase().startsWith("pt") ? "pt" : "en";
+  // Links de contato das páginas de suporte e privacidade já dizem o idioma
+  if (location.hash === "#contato") lang = "pt";
+  if (location.hash === "#contact") lang = "en";
   const t = key => (lang === "en" ? EN : PT)[key];
 
   function applyLang() {
@@ -91,6 +94,10 @@
   $("[data-close]").addEventListener("click", () => contact.close());
   // Clique fora do cartão fecha
   contact.addEventListener("click", e => { if (e.target === contact) contact.close(); });
+  // termin-app.com/#contato (ou #contact) abre o formulário direto
+  const openFromHash = () => { if (/^#conta(to|ct)$/.test(location.hash) && !contact.open) contact.showModal(); };
+  openFromHash();
+  addEventListener("hashchange", openFromHash);
 
   form.addEventListener("submit", async e => {
     e.preventDefault();
