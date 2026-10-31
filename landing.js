@@ -15,7 +15,7 @@
     "cta.store": "Download on the App Store",
     "hero.eyebrow": "For Mac · Free on the App Store",
     "hero.t1": "Your next meeting.", "hero.t2": "Always in sight.",
-    "hero.lead": "Termin puts your calendar in the Mac menu bar, so you always know what's next and how much time you have.",
+    "hero.lead": "<b>Termin</b> puts your calendar in the Mac menu bar, so you always know what's next and how much time you have.",
     "hero.more": "See how it works",
     "hero.p1": "Next meeting in the menu bar", "hero.p2": "Daily summary in a notification",
     "hero.p3": "Know when to leave for the event", "hero.p4": "Two time zones",
