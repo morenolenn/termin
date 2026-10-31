@@ -79,6 +79,7 @@
     $$("[data-i18n-html]").forEach(el => { el.innerHTML = t(el.dataset.i18nHtml); });
     $(".lang").textContent = lang === "en" ? "PT" : "EN";
     splitWords();
+    placePerks();
     lastMinute = null;
     update();
   }
@@ -147,6 +148,16 @@
   const mac = $(".mac"), macShot = $(".mac-screen img");
   const MENU = { x: 0.8375, y: 0.34, w: 0.151, h: 0.614 }; // menu na imagem tela.webp, em frações
   const ease = x => x * x * (3 - 2 * x);
+
+  // A lista de diferenciais fica no meio do espaço entre os botões e o topo do Mac
+  const heroText = $(".hero-text"), heroActions = $(".hero .actions"), perks = $(".perks");
+  function placePerks() {
+    const buttonsEnd = heroText.offsetTop + heroActions.offsetTop + heroActions.offsetHeight;
+    const gap = mac.offsetTop - buttonsEnd;
+    perks.style.marginTop = `${Math.max(20, (gap - perks.offsetHeight) / 2)}px`;
+  }
+  addEventListener("resize", placePerks);
+  document.fonts?.ready.then(placePerks);
 
   function camera(p) {
     const W = innerWidth, H = innerHeight;
