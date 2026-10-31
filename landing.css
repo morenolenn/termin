@@ -117,12 +117,12 @@ em { font-style: normal; }
 .hero h1 .line:nth-child(2) > * { animation-delay: .12s; }
 @keyframes rise { from { transform: translateY(110%); } }
 .hero .lead b { color: var(--ink); font-weight: 600; }
-.hero .lead { margin: 20px auto 0; animation: fade 1.2s .35s both; }
+.hero .lead { margin: 20px auto 30px; animation: fade 1.2s .35s both; }
 .perks {
-  list-style: none; margin: 32px auto; padding: 0; max-width: 900px;
+  list-style: none; margin: 32px auto 0; padding: 0; max-width: 900px;
   display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px;
   font-size: 15px; font-weight: 500; color: var(--ink);
-  animation: fade 1.2s .45s both;
+  animation: fade 1.2s .65s both;
 }
 .perks li { display: flex; align-items: center; gap: 7px; }
 .perks svg {
@@ -133,7 +133,7 @@ em { font-style: normal; }
 @keyframes fade { from { opacity: 0; transform: translateY(20px); } }
 
 .mac {
-  position: absolute; left: 50%; top: 74vh;
+  position: absolute; left: 50%; top: 79vh;
   width: min(1100px, 90vw);
   /* o transform vem do landing.js: endireita o Mac e depois aproxima a câmera do calendário */
   transform-origin: 50% 0;
@@ -401,6 +401,15 @@ em { font-style: normal; }
 .reveal.in { opacity: 1; transform: none; filter: none; }
 .card.reveal.in { transform: perspective(900px) rotateX(var(--ry, 0deg)) rotateY(var(--rx, 0deg)); }
 
+/* Notebooks com tela mais baixa: compacta o topo para a lista não ficar atrás do Mac */
+@media (min-width: 861px) and (max-height: 820px) {
+  .hero-text { top: 10vh; }
+  .hero h1 { font-size: clamp(44px, 6.2vw, 80px); }
+  .hero .lead { margin: 16px auto 24px; }
+  .perks { margin-top: 24px; }
+  .mac { top: 80vh; }
+}
+
 /* Telas menores */
 @media (max-width: 860px) {
   .nav nav { display: none; }
@@ -414,8 +423,8 @@ em { font-style: normal; }
   .rail figure { width: 82vw; }
   .mb-icons, .mb-day, .mb-play { display: none; }
   .hero-text { top: 11vh; }
-  .hero .lead { font-size: 16px; margin: 14px auto 0; }
-  .perks { font-size: 14px; gap: 6px; flex-direction: column; align-items: flex-start; margin: 32px auto; }
+  .hero .lead { font-size: 16px; margin: 14px auto 22px; }
+  .perks { font-size: 14px; gap: 6px; flex-direction: column; align-items: flex-start; margin: 28px auto 0; }
   .mac { top: 88vh; }
 }
 
