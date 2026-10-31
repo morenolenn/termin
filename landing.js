@@ -89,6 +89,22 @@
     applyLang();
   });
 
+  // ---------- Estatísticas (Umami) ----------
+  // Cliques nos botões vêm dos atributos data-umami-event no HTML; aqui ficam os eventos feitos em código
+  const stat = (name, data) => { try { window.umami?.track(name, data); } catch {} };
+
+  // Até onde a pessoa rolou: conta cada seção uma vez por visita, quando o topo dela passa do meio da tela
+  // (inclusive as que ficaram para trás num salto, como ao clicar em "Pro" no menu)
+  let unseen = $$("[data-track]");
+  function trackDepth() {
+    unseen = unseen.filter(el => {
+      if (el.getBoundingClientRect().top > innerHeight / 2) return true;
+      stat("Seção vista", { secao: el.dataset.track });
+      return false;
+    });
+  }
+  addEventListener("scroll", trackDepth, { passive: true });
+
   // ---------- Contato ----------
   const contact = $(".contact"), form = $(".contact-form"), status = $(".contact-status");
   $$("[data-contact]").forEach(b => b.addEventListener("click", () => contact.showModal()));
@@ -96,7 +112,11 @@
   // Clique fora do cartão fecha
   contact.addEventListener("click", e => { if (e.target === contact) contact.close(); });
   // termin-app.com/#contato (ou #contact) abre o formulário direto
-  const openFromHash = () => { if (/^#conta(to|ct)$/.test(location.hash) && !contact.open) contact.showModal(); };
+  const openFromHash = () => {
+    if (!/^#conta(to|ct)$/.test(location.hash) || contact.open) return;
+    contact.showModal();
+    stat("Abriu contato", { local: "link" });
+  };
   openFromHash();
   addEventListener("hashchange", openFromHash);
 
@@ -115,6 +135,7 @@
       const data = await res.json();
       if (!data.success) throw new Error(data.message);
       form.reset();
+      stat("Mensagem enviada");
       status.textContent = t("ct.ok"); status.dataset.state = "ok";
     } catch {
       status.textContent = t("ct.err"); status.dataset.state = "err";
