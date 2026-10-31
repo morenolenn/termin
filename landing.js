@@ -97,6 +97,42 @@
     return run > 0 ? clamp(-r.top / run) : clamp((innerHeight - r.top) / (innerHeight + r.height));
   }
 
+  // Abertura: o Mac começa inclinado, se endireita e a câmera se aproxima do menu do Termin
+  const mac = $(".mac"), macShot = $(".mac-screen img");
+  const MENU = { x: 0.8375, y: 0.34, w: 0.151, h: 0.614 }; // menu na imagem tela.webp, em frações
+  const ease = x => x * x * (3 - 2 * x);
+
+  function camera(p) {
+    const W = innerWidth, H = innerHeight;
+    const w = mac.offsetWidth, top = mac.offsetTop;
+    const iw = macShot.offsetWidth, ih = macShot.offsetHeight, border = macShot.offsetTop;
+    const a = ease(clamp(p / 0.3)), z = ease(clamp((p - 0.34) / 0.56));
+
+    // Ponto do menu, medido a partir do topo-centro do Mac (a origem do transform)
+    const px = border + MENU.x * iw - w / 2, py = border + MENU.y * ih;
+
+    // Mac reto e centralizado na tela, antes do zoom
+    const fitY = (H - mac.offsetHeight) / 2 - top;
+    const s1 = 1, ty1 = fitY;
+    // Zoom: o menu ocupa quase toda a altura (ou largura, no celular)
+    const s2 = Math.min(6, 0.74 * H / (MENU.h * ih), 0.9 * W / (MENU.w * iw));
+
+    let tx, ty, s;
+    if (z === 0) {
+      s = 0.9 + a * (s1 - 0.9); tx = 0; ty = a * ty1;
+    } else {
+      s = s1 + z * (s2 - s1);
+      // O ponto do menu vai de onde está para o centro da tela, como uma câmera
+      const fx = W / 2 + px * s1 + z * (0 - px * s1), fy = top + ty1 + py * s1;
+      const fyTarget = H * 0.54;
+      const cy = fy + z * (fyTarget - fy);
+      tx = fx - W / 2 - px * s;
+      ty = cy - top - py * s;
+    }
+    const tilt = 20 * (1 - a);
+    mac.style.transform = `translate(calc(-50% + ${tx.toFixed(1)}px), ${ty.toFixed(1)}px) rotateX(${tilt.toFixed(2)}deg) scale(${s.toFixed(4)})`;
+  }
+
   function update() {
     const doc = document.documentElement;
     doc.style.setProperty("--page", (scrollY / (doc.scrollHeight - innerHeight)).toFixed(4));
@@ -104,6 +140,8 @@
     for (const s of sections) {
       const p = progress(s);
       s.style.setProperty("--p", p.toFixed(4));
+
+      if (s.classList.contains("hero")) camera(p);
 
       if (s.classList.contains("countdown")) {
         // 8 minutos que passam com o scroll; o aviso aparece no último minuto
