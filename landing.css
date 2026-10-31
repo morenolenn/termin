@@ -174,11 +174,11 @@ em { font-style: normal; color: var(--soft); }
 .mb-title { padding: 2px 10px; border-radius: 8px; transition: background .3s, color .3s; }
 .mb-title b { font-weight: 600; font-variant-numeric: tabular-nums; }
 .menubar.now .mb-title { background: var(--blue); color: #fff; }
-.mb-icons { display: flex; align-items: center; gap: 1.3em; margin: 0 .3em; }
-.mb-icons svg, .mb-play { width: 1.05em; height: 1.05em; flex: none; fill: none; stroke: #fff; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.mb-icons { display: flex; align-items: center; gap: 2.1em; margin: 0 1.2em; }
+.mb-icons svg, .mb-play { width: 1.2em; height: 1.2em; flex: none; fill: none; stroke: #fff; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
 .mb-icons svg .fill, .mb-play .fill { fill: #fff; stroke: none; }
 .mb-icons svg .hole { fill: #0b0b0d; stroke: none; }
-.mb-icons .mb-battery { width: 1.5em; }
+.mb-icons .mb-battery { width: 1.75em; }
 .mb-day { margin-right: -.4em; }
 .mb-clock { font-variant-numeric: tabular-nums; }
 .toast {
