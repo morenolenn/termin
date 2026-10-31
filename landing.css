@@ -26,6 +26,10 @@ img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3 { margin: 0; letter-spacing: -0.035em; line-height: 1.05; font-weight: 700; }
 h2 { font-size: clamp(40px, 6vw, 80px); }
+/* Quebra as linhas dos títulos de forma equilibrada, sem uma palavra sozinha */
+h1, h2 { text-wrap: balance; }
+/* O título do Pro fica em meia coluna: menor para cada frase caber numa linha */
+.pro-copy h2 { font-size: clamp(36px, 4.2vw, 60px); }
 /* Segunda linha dos títulos: mesma fonte, em cinza */
 em { font-style: normal; }
 .center { text-align: center; }
