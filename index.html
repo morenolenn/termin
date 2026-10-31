@@ -3,62 +3,236 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Termin – Suporte · Support</title>
-<link rel="icon" href="icon.png">
-<link rel="stylesheet" href="style.css">
+<title>Termin – Sua próxima reunião na barra de menus do Mac</title>
+<meta name="description" content="O Termin coloca a sua próxima reunião na barra de menus do Mac. Entre nas chamadas com um clique, saiba a hora de sair e veja dois fusos horários.">
+<meta property="og:title" content="Termin – Sua próxima reunião, sempre à vista">
+<meta property="og:description" content="Sua agenda na barra de menus do Mac. Sem conta, sem anúncios, sem rastreamento.">
+<meta property="og:image" content="https://termin-app.com/img/tela.webp">
+<meta property="og:url" content="https://termin-app.com/">
+<link rel="canonical" href="https://termin-app.com/">
+<meta name="theme-color" content="#fbfbfd">
+<link rel="icon" href="img/icon.png">
+<link rel="stylesheet" href="landing.css">
 </head>
 <body>
-<main>
-  <header>
-    <img src="icon.png" alt="">
-    <div>
-      <h1>Termin</h1>
-      <p>Sua próxima reunião na barra de menus do Mac · Your next meeting in the Mac menu bar</p>
-    </div>
-  </header>
+
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="#top"><img src="img/icon.png" alt=""><span>Termin</span></a>
   <nav>
-    <a href="#pt">Suporte (Português)</a>
-    <a href="#en">Support (English)</a>
-    <a href="privacy.html">Privacidade · Privacy</a>
+    <a href="#recursos" data-i18n="nav.features">Recursos</a>
+    <a href="#pro">Pro</a>
+    <a href="#privacidade" data-i18n="nav.privacy">Privacidade</a>
   </nav>
+  <div class="nav-end">
+    <button class="lang" type="button" aria-label="Language">EN</button>
+    <a class="btn btn-small store-link" href="#baixar" data-i18n="cta.short">Baixar</a>
+  </div>
+</header>
 
-  <section id="pt" lang="pt-BR">
-    <h2>Suporte</h2>
-    <p>Encontrou um problema, tem uma dúvida ou uma ideia para o Termin? Escreva para mim. Eu respondo pessoalmente, normalmente em poucos dias.</p>
-    <a class="mail" href="mailto:morenolenn@gmail.com?subject=Termin">morenolenn@gmail.com</a>
+<main id="top">
 
-    <h3>O Termin não mostra meus eventos</h3>
-    <p>Abra Ajustes do Sistema → Privacidade e Segurança → Calendários e confira se o Termin tem acesso total. As agendas do Google, do Outlook e de outros serviços aparecem quando a conta está adicionada no app Calendário do Mac.</p>
-
-    <h3>O tempo de deslocamento não aparece</h3>
-    <p>Ele faz parte do Termin Pro e precisa de acesso à localização (Ajustes do Sistema → Privacidade e Segurança → Serviços de Localização) e de um endereço no local do evento.</p>
-
-    <h3>Comprei o Termin Pro em outro Mac</h3>
-    <p>Abra as Configurações do Termin → Sobre → Restaurar compra, com a mesma conta Apple da compra.</p>
-
-    <h3>Reembolso</h3>
-    <p>Compras na App Store são reembolsadas pela Apple, em <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+  <!-- 1. Abertura: o Mac inclinado que se endireita com o scroll -->
+  <section class="hero" data-scroll>
+    <div class="sticky">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="hero-text">
+        <p class="eyebrow"><span class="dot"></span><span data-i18n="hero.eyebrow">Para Mac · Grátis na App Store</span></p>
+        <h1>
+          <span class="line"><span data-i18n="hero.t1">Sua próxima reunião.</span></span>
+          <span class="line"><em data-i18n="hero.t2">Sempre à vista.</em></span>
+        </h1>
+        <p class="lead" data-i18n="hero.lead">O Termin coloca a sua agenda na barra de menus do Mac, para você sempre saber o que vem a seguir e quanto tempo ainda tem.</p>
+        <div class="actions">
+          <a class="btn store-link" href="#baixar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-3.9zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1 .1 2.1-.6 2.8-1.4z"/></svg><span data-i18n="cta.store">Baixar na App Store</span></a>
+          <a class="btn btn-ghost" href="#recursos" data-i18n="hero.more">Ver como funciona</a>
+        </div>
+      </div>
+      <div class="mac">
+        <div class="mac-screen">
+          <img src="img/tela.webp" alt="O menu do Termin aberto na barra de menus do Mac" width="2400" height="1500">
+          <span class="spot" aria-hidden="true"></span>
+        </div>
+        <div class="mac-base" aria-hidden="true"></div>
+      </div>
+    </div>
   </section>
 
-  <section id="en" lang="en">
-    <h2>Support</h2>
-    <p>Found a problem, have a question or an idea for Termin? Write to me. I answer personally, usually within a few days.</p>
-    <a class="mail" href="mailto:morenolenn@gmail.com?subject=Termin">morenolenn@gmail.com</a>
-
-    <h3>Termin doesn't show my events</h3>
-    <p>Open System Settings → Privacy &amp; Security → Calendars and make sure Termin has full access. Google, Outlook and other calendars appear once the account is added to the Mac's Calendar app.</p>
-
-    <h3>Travel time doesn't appear</h3>
-    <p>It's part of Termin Pro and needs location access (System Settings → Privacy &amp; Security → Location Services) and an address in the event's location.</p>
-
-    <h3>I bought Termin Pro on another Mac</h3>
-    <p>Open Termin Settings → About → Restore Purchase, using the same Apple Account you bought it with.</p>
-
-    <h3>Refunds</h3>
-    <p>App Store purchases are refunded by Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+  <!-- 2. Faixa de compatibilidade que corre com o scroll -->
+  <section class="marquee" aria-label="Compatível com">
+    <div class="track">
+      <span>iCloud</span><i></i><span>Google Calendar</span><i></i><span>Outlook</span><i></i><span>Exchange</span><i></i><span>Zoom</span><i></i><span>Google Meet</span><i></i><span>Microsoft Teams</span><i></i><span>Whereby</span><i></i><span>Webex</span><i></i>
+      <span>iCloud</span><i></i><span>Google Calendar</span><i></i><span>Outlook</span><i></i><span>Exchange</span><i></i><span>Zoom</span><i></i><span>Google Meet</span><i></i><span>Microsoft Teams</span><i></i><span>Whereby</span><i></i><span>Webex</span><i></i>
+    </div>
   </section>
 
-  <footer>© 2026 Moreno Lennertz · <a href="privacy.html">Privacidade · Privacy</a></footer>
+  <!-- 3. A contagem regressiva que anda com o scroll -->
+  <section class="countdown" data-scroll id="recursos">
+    <div class="sticky">
+      <p class="eyebrow center" data-i18n="cd.eyebrow">Num relance</p>
+      <h2 class="center" data-i18n-html="cd.title">Role a página.<br><em>O tempo passa.</em></h2>
+      <div class="menubar" aria-hidden="true">
+        <span class="mb-apple"></span>
+        <span class="mb-spacer"></span>
+        <span class="mb-date" data-i18n="cd.date">Qui, 29 out</span>
+        <span class="mb-title">Design review · <b class="mb-left">em 8 min</b></span>
+        <span class="mb-icons"><i></i><i></i><i></i></span>
+        <span class="mb-clock">07:22</span>
+      </div>
+      <div class="toast" aria-hidden="true">
+        <img src="img/icon.png" alt="">
+        <div><b>Design review</b><span data-i18n="cd.toast">Começa em 1 minuto</span></div>
+        <span class="toast-btn" data-i18n="cd.join">Entrar</span>
+      </div>
+      <p class="cd-caption center" data-i18n="cd.caption">A próxima reunião e a contagem regressiva direto na barra de menus. Um minuto antes, um aviso com o botão “Entrar”, que abre a chamada.</p>
+    </div>
+  </section>
+
+  <!-- 4. História dos recursos: o texto muda e a imagem troca ao rolar -->
+  <section class="story" data-scroll>
+    <div class="sticky">
+      <div class="story-text">
+        <article class="step" data-step="0">
+          <span class="num">01</span>
+          <h3 data-i18n="s1.t">Hoje, amanhã e os próximos dias</h3>
+          <p data-i18n="s1.p">Clique na barra e veja o mês inteiro e todos os seus eventos. Funciona com todas as agendas do seu Mac.</p>
+        </article>
+        <article class="step" data-step="1">
+          <span class="num">02</span>
+          <h3 data-i18n="s2.t">Saiba a hora de sair</h3>
+          <p data-i18n="s2.p">Quanto tempo leva até cada evento, de carro, transporte público ou a pé, e um aviso na hora de sair.</p>
+        </article>
+        <article class="step" data-step="2">
+          <span class="num">03</span>
+          <h3 data-i18n="s3.t">Encontre qualquer evento</h3>
+          <p data-i18n="s3.p">Busque por título ou participante e responda aos convites sem abrir outro app.</p>
+        </article>
+        <article class="step" data-step="3">
+          <span class="num">04</span>
+          <h3 data-i18n="s4.t">Crie eventos em segundos</h3>
+          <p data-i18n="s4.p">Com link do Google Meet, convidados, alerta e um segundo fuso horário, direto da barra de menus.</p>
+        </article>
+        <div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="stage">
+        <div class="stage-bg" aria-hidden="true"></div>
+        <img class="shot" data-shot="0" src="img/menu.webp" alt="Calendário do mês e lista de eventos do Termin" loading="lazy">
+        <img class="shot" data-shot="1" src="img/deslocamento.webp" alt="Tempo de deslocamento até o evento" loading="lazy">
+        <img class="shot" data-shot="2" src="img/busca.webp" alt="Busca de eventos" loading="lazy">
+        <img class="shot" data-shot="3" src="img/novo-evento.webp" alt="Janela de novo evento" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Galeria horizontal guiada pelo scroll vertical -->
+  <section class="gallery" data-scroll>
+    <div class="sticky">
+      <h2 class="gallery-title"><span data-i18n="g.t1">Feito para o Mac.</span> <em data-i18n="g.t2">Do jeito do Mac.</em></h2>
+      <div class="rail">
+        <figure><img src="img/galeria-1.webp" alt="" loading="lazy"><figcaption data-i18n="g.c1">O menu, com o mês e a agenda</figcaption></figure>
+        <figure><img src="img/galeria-4.webp" alt="" loading="lazy"><figcaption data-i18n="g.c2">Endereço, rota e hora de sair</figcaption></figure>
+        <figure><img src="img/galeria-3.webp" alt="" loading="lazy"><figcaption data-i18n="g.c3">Busca instantânea</figcaption></figure>
+        <figure><img src="img/galeria-2.webp" alt="" loading="lazy"><figcaption data-i18n="g.c4">Novo evento com dois fusos</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Grade de recursos -->
+  <section class="bento-wrap">
+    <p class="eyebrow center reveal" data-i18n="b.eyebrow">E mais um monte de detalhes</p>
+    <h2 class="center reveal" data-i18n-html="b.title">Pequeno na barra.<br><em>Grande no dia a dia.</em></h2>
+    <div class="bento">
+      <div class="card tz reveal">
+        <h3 data-i18n="b.tz.t">Segundo fuso horário</h3>
+        <p data-i18n="b.tz.p">O horário de outra cidade no relógio, nos eventos e ao criar eventos.</p>
+        <div class="clocks">
+          <div><span>MUN</span><b data-tz="Europe/Berlin">--:--</b></div>
+          <div><span>RDJ</span><b data-tz="America/Sao_Paulo">--:--</b></div>
+        </div>
+      </div>
+      <div class="card join reveal">
+        <h3 data-i18n="b.join.t">Entre com um clique</h3>
+        <p data-i18n="b.join.p">O Termin encontra o link da chamada no evento: Zoom, Meet, Teams, Whereby e outros.</p>
+        <div class="join-demo"><span class="cam"></span><span class="join-pill" data-i18n="cd.join">Entrar</span></div>
+      </div>
+      <div class="card detail reveal">
+        <img src="img/deslocamento-detalhe.webp" alt="" loading="lazy">
+        <h3 data-i18n="b.map.t">O local no Mapas</h3>
+        <p data-i18n="b.map.p">Abra o endereço no Mapas, mande e-mail para os participantes ou abra seu app de calendário preferido.</p>
+      </div>
+      <div class="card all reveal">
+        <h3 data-i18n="b.cal.t">Todas as suas agendas</h3>
+        <p data-i18n="b.cal.p">iCloud, Google, Outlook, Exchange e outras, as mesmas do app Calendário.</p>
+        <div class="chips"><span>iCloud</span><span>Google</span><span>Outlook</span><span>Exchange</span></div>
+      </div>
+      <div class="card theme reveal">
+        <h3 data-i18n="b.theme.t">Claro e escuro</h3>
+        <p data-i18n="b.theme.p">Segue a aparência do seu Mac e abre junto com ele, se você quiser.</p>
+        <div class="theme-demo" aria-hidden="true"><span></span><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Termin Pro -->
+  <section class="pro" id="pro" data-scroll>
+    <div class="pro-inner">
+      <div class="pro-copy">
+        <p class="eyebrow reveal">Termin Pro</p>
+        <h2 class="reveal" data-i18n-html="pro.title">Compre uma vez.<br><em>Use para sempre.</em></h2>
+        <p class="lead reveal" data-i18n="pro.lead">Experimente todas as funções Pro grátis por 14 dias. Nada é cobrado automaticamente. Depois, libere o Pro com uma compra única.</p>
+        <div class="price reveal">
+          <div><b class="count" data-to="14">0</b><span data-i18n="pro.days">dias grátis</span></div>
+          <div><b data-i18n="pro.price">6,99 €</b><span data-i18n="pro.once">uma vez, sem assinatura</span></div>
+        </div>
+        <ul class="pro-list reveal">
+          <li data-i18n="pro.l1">Tempo de deslocamento e aviso na hora de sair</li>
+          <li data-i18n="pro.l2">Segundo fuso horário</li>
+          <li data-i18n="pro.l3">Busca e resposta a convites</li>
+          <li data-i18n="pro.l5">Resumo do dia no horário que você escolher</li>
+          <li data-i18n="pro.l4">Google Meet e convidados ao criar eventos</li>
+        </ul>
+      </div>
+      <div class="pro-visual">
+        <div class="notif">
+          <img src="img/icon.png" alt="">
+          <div><b data-i18n="pro.n1.t">Hora de sair: Lunch with Ana</b><span data-i18n="pro.n1.b">26 min a pé · começa às 17:15</span></div>
+          <span class="notif-btn" data-i18n="pro.n1.a">Abrir rota</span>
+        </div>
+        <div class="notif">
+          <img src="img/icon.png" alt="">
+          <div><b data-i18n="pro.n2.t">Hoje: 4 eventos</b><span>15:00 Design review<br>17:15 Lunch with Ana<br>19:30 Product sync<br><span data-i18n="pro.n2.more">+ 1 outro evento</span></span></div>
+        </div>
+        <img class="pro-shot" src="img/deslocamento-detalhe.webp" alt="Endereço e tempo de deslocamento até o evento" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Privacidade: as palavras acendem com o scroll -->
+  <section class="privacy" id="privacidade" data-scroll>
+    <div class="sticky">
+      <div class="shield" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none"/></svg></div>
+      <p class="words" data-i18n="priv.text">Sem conta. Sem anúncios. Sem rastreamento. O Termin não coleta nenhum dado. Sua agenda fica no seu Mac.</p>
+    </div>
+  </section>
+
+  <!-- 9. Chamada final -->
+  <section class="final" id="baixar">
+    <img class="final-icon reveal" src="img/icon.png" alt="">
+    <h2 class="reveal" data-i18n-html="final.title">Nunca mais chegue<br><em>atrasado numa reunião.</em></h2>
+    <p class="lead reveal" data-i18n="final.lead">Grátis na Mac App Store. Termin Pro grátis por 14 dias.</p>
+    <a class="btn btn-big store-link reveal" href="#baixar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-3.9zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1 .1 2.1-.6 2.8-1.4z"/></svg><span data-i18n="cta.store">Baixar na App Store</span></a>
+    <p class="small reveal" data-i18n="final.req">Requer macOS 14 ou posterior.</p>
+  </section>
 </main>
+
+<footer class="foot">
+  <span>© 2026 Moreno Lennertz</span>
+  <a href="suporte.html" data-i18n="foot.support">Suporte</a>
+  <a href="privacy.html" data-i18n="foot.privacy">Privacidade</a>
+  <a href="mailto:morenolenn@gmail.com?subject=Termin">morenolenn@gmail.com</a>
+</footer>
+
+<script src="landing.js"></script>
 </body>
 </html>
