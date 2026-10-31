@@ -48,10 +48,19 @@
     "final.title": "Never be late<br><em>for a meeting again.</em>",
     "final.lead": "Free on the Mac App Store. Termin Pro free for 14 days.",
     "final.req": "Requires macOS 14 or later.",
-    "foot.support": "Support", "foot.privacy": "Privacy",
+    "foot.support": "Support", "foot.privacy": "Privacy", "foot.contact": "Contact",
+    "ct.role": "Creator of Termin", "ct.title": "Get in touch",
+    "ct.lead": "A question, an idea or a problem with Termin? Write here and I'll reply personally, usually within a few days.",
+    "ct.name": "Name", "ct.email": "Email", "ct.msg": "Message", "ct.send": "Send message",
+    "ct.sending": "Sending…", "ct.ok": "Thanks! Your message was sent.", "ct.err": "Couldn't send. Please try again in a moment.",
+    "ct.missing": "Please fill in your name, a valid email and the message.",
     "minutes": m => `in ${m} min`, "now": "now", "title": "Termin – Your next meeting in the Mac menu bar",
   };
-  const PT = { "minutes": m => `em ${m} min`, "now": "agora", "title": document.title };
+  const PT = {
+    "minutes": m => `em ${m} min`, "now": "agora", "title": document.title,
+    "ct.sending": "Enviando…", "ct.ok": "Obrigado! Sua mensagem foi enviada.", "ct.err": "Não foi possível enviar. Tente de novo daqui a pouco.",
+    "ct.missing": "Preencha seu nome, um e-mail válido e a mensagem.",
+  };
   $$("[data-i18n]").forEach(el => { PT[el.dataset.i18n] ??= el.textContent; });
   $$("[data-i18n-html]").forEach(el => { PT[el.dataset.i18nHtml] = el.innerHTML; });
 
@@ -74,6 +83,36 @@
     lang = lang === "en" ? "pt" : "en";
     try { localStorage.setItem("termin-lang", lang); } catch {}
     applyLang();
+  });
+
+  // ---------- Contato ----------
+  const contact = $(".contact"), form = $(".contact-form"), status = $(".contact-status");
+  $$("[data-contact]").forEach(b => b.addEventListener("click", () => contact.showModal()));
+  $("[data-close]").addEventListener("click", () => contact.close());
+  // Clique fora do cartão fecha
+  contact.addEventListener("click", e => { if (e.target === contact) contact.close(); });
+
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    if (!form.checkValidity()) { status.textContent = t("ct.missing"); status.dataset.state = "err"; return; }
+    const button = form.querySelector("button[type=submit]");
+    button.disabled = true;
+    status.textContent = t("ct.sending"); status.dataset.state = "";
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(Object.fromEntries(new FormData(form))),
+      });
+      const data = await res.json();
+      if (!data.success) throw new Error(data.message);
+      form.reset();
+      status.textContent = t("ct.ok"); status.dataset.state = "ok";
+    } catch {
+      status.textContent = t("ct.err"); status.dataset.state = "err";
+    } finally {
+      button.disabled = false;
+    }
   });
 
   // ---------- Palavras da privacidade ----------

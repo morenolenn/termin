@@ -12,7 +12,7 @@
 <link rel="canonical" href="https://termin-app.com/">
 <meta name="theme-color" content="#fbfbfd">
 <link rel="icon" href="img/icon.png">
-<link rel="stylesheet" href="landing.css?v=14">
+<link rel="stylesheet" href="landing.css?v=15">
 </head>
 <body>
 
@@ -238,12 +238,39 @@
 </main>
 
 <footer class="foot">
-  <span>© 2026 Moreno Lennertz</span>
+  <span>© 2026 Termin</span>
   <a href="suporte.html" data-i18n="foot.support">Suporte</a>
   <a href="privacy.html" data-i18n="foot.privacy">Privacidade</a>
-  <a href="mailto:morenolenn@gmail.com?subject=Termin">morenolenn@gmail.com</a>
+  <button type="button" class="foot-link" data-contact data-i18n="foot.contact">Contato</button>
 </footer>
 
-<script src="landing.js?v=11"></script>
+<!-- Contato: abre pelo rodapé; a mensagem vai por e-mail via Web3Forms, sem expor o endereço -->
+<dialog class="contact" aria-labelledby="contact-title">
+  <button type="button" class="contact-close" aria-label="Fechar" data-close>×</button>
+  <div class="maker">
+    <span class="avatar"><img src="img/criador.webp" alt="" onerror="this.remove()"><span aria-hidden="true">M</span></span>
+    <div>
+      <p class="maker-name">Moreno</p>
+      <p class="maker-role" data-i18n="ct.role">Criador do Termin</p>
+    </div>
+    <a class="linkedin" href="https://www.linkedin.com/in/morenolennertz/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.36h-4v-4.75c0-1.13-.02-2.59-1.58-2.59-1.58 0-1.82 1.23-1.82 2.5v4.84h-4z"/></svg>
+    </a>
+  </div>
+  <h2 id="contact-title" data-i18n="ct.title">Fale comigo</h2>
+  <p class="contact-lead" data-i18n="ct.lead">Dúvida, ideia ou problema com o Termin? Escreva aqui e eu respondo pessoalmente, normalmente em poucos dias.</p>
+  <form class="contact-form" novalidate>
+    <input type="hidden" name="access_key" value="7bbce34b-218b-4dae-94d8-d4169a8a37c3">
+    <input type="hidden" name="subject" value="Termin: nova mensagem pelo site">
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+    <label><span data-i18n="ct.name">Nome</span><input name="name" required autocomplete="name"></label>
+    <label><span data-i18n="ct.email">E-mail</span><input name="email" type="email" required autocomplete="email"></label>
+    <label><span data-i18n="ct.msg">Mensagem</span><textarea name="message" rows="5" required></textarea></label>
+    <button class="btn" type="submit" data-i18n="ct.send">Enviar mensagem</button>
+    <p class="contact-status" role="status" aria-live="polite"></p>
+  </form>
+</dialog>
+
+<script src="landing.js?v=15"></script>
 </body>
 </html>
