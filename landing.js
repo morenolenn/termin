@@ -30,7 +30,7 @@
     "g.t1": "Made for the Mac.", "g.t2": "The Mac way.",
     "g.c1": "The menu, with the month and your schedule", "g.c2": "Address, route and when to leave",
     "g.c3": "Instant search", "g.c4": "New event with two time zones",
-    "b.eyebrow": "And lots of little details", "b.title": "Small in the menu bar.<br><em>Big in your day.</em>",
+    "b.eyebrow": "All one click away", "b.title": "Small in the menu bar.<br><em>Big in your day.</em>",
     "b.tz.t": "Second time zone", "b.tz.p": "Another city's time in the clock, in your events and when creating events.",
     "b.join.t": "Join in one click", "b.join.p": "Termin finds the call link in your event: Zoom, Meet, Teams, Whereby and more.",
     "b.map.t": "The place in Maps", "b.map.p": "Open the address in Maps, email all attendees or open your favorite calendar app.",
