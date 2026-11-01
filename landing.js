@@ -56,6 +56,52 @@
     "ct.missing": "Please fill in your name, a valid email and the message.",
     "minutes": m => `in ${m} min`, "now": "now", "title": "Termin – Your next meeting in the Mac menu bar",
   };
+  const DE = {
+    "nav.features": "Funktionen", "nav.privacy": "Datenschutz", "cta.short": "Laden",
+    "cta.store": "Im App Store laden",
+    "hero.eyebrow": "Für den Mac · Gratis im App Store",
+    "hero.t1": "Dein nächstes Meeting.", "hero.t2": "Immer im Blick.",
+    "hero.lead": "<b>Termin</b> bringt deinen Kalender in die Menüleiste deines Mac. So weißt du immer, was als Nächstes ansteht und wie viel Zeit dir noch bleibt.",
+    "hero.more": "So funktioniert’s",
+    "hero.p1": "Nächstes Meeting in der Menüleiste", "hero.p2": "Tagesübersicht als Mitteilung",
+    "hero.p3": "Hinweis, wann du losmusst", "hero.p4": "Zwei Zeitzonen",
+    "hero.p5": "Mit 1 Klick ins Meeting",
+    "cd.eyebrow": "Auf einen Blick", "cd.title": "Scroll die Seite.<br><em>Die Zeit läuft.</em>",
+    "cd.date": "Do., 29. Okt.", "cd.day": "Do. 29. Okt.", "cd.toast": "Beginnt in 1 Minute", "cd.join": "Beitreten",
+    "cd.caption": "Dein nächstes Meeting mit Countdown direkt in der Menüleiste. Eine Minute vorher ein Hinweis mit der Taste „Beitreten“, die den Anruf öffnet.",
+    "s1.t": "Heute, morgen und die nächsten Tage", "s1.p": "Ein Klick in die Menüleiste zeigt den ganzen Monat und alle Termine. Funktioniert mit allen Kalendern auf deinem Mac.",
+    "s2.t": "Wissen, wann du losmusst", "s2.p": "Wie lange du zu jedem Termin brauchst, mit dem Auto, mit Öffis oder zu Fuß, und ein Hinweis, wenn es Zeit zum Aufbruch ist.",
+    "s3.t": "Jeden Termin finden", "s3.p": "Suche nach Titel oder Teilnehmenden und beantworte Einladungen, ohne eine andere App zu öffnen.",
+    "s4.t": "Termine in Sekunden erstellen", "s4.p": "Mit Google-Meet-Link, Gästen, Hinweis und zweiter Zeitzone, direkt aus der Menüleiste.",
+    "g.t1": "Gemacht für den Mac.", "g.t2": "Wie ein Mac es macht.",
+    "g.c1": "Das Menü mit Monat und Terminen", "g.c2": "Adresse, Route und wann du losmusst",
+    "g.c3": "Sofortige Suche", "g.c4": "Neuer Termin mit zwei Zeitzonen",
+    "b.eyebrow": "Alles mit einem Klick", "b.title": "Klein in der Menüleiste.<br><em>Groß im Alltag.</em>",
+    "b.tz.t": "Zweite Zeitzone", "b.tz.p": "Die Uhrzeit einer anderen Stadt in der Uhr, bei deinen Terminen und beim Erstellen von Terminen.",
+    "b.join.t": "Mit einem Klick beitreten", "b.join.p": "Termin findet den Link zum Anruf in deinem Termin: Zoom, Meet, Teams, Whereby und mehr.",
+    "b.map.t": "Der Ort in Karten", "b.map.p": "Öffne die Adresse in Karten, schreib allen Teilnehmenden eine E-Mail oder öffne deine Lieblings-Kalender-App.",
+    "b.cal.t": "Alle deine Kalender", "b.cal.p": "iCloud, Google, Outlook, Exchange und mehr, dieselben wie in der Kalender-App.",
+    "b.theme.t": "Hell und dunkel", "b.theme.p": "Folgt dem Erscheinungsbild deines Mac und startet auf Wunsch mit ihm.",
+    "pro.title": "Einmal kaufen.<br><em>Für immer nutzen.</em>",
+    "pro.lead": "Teste alle Pro-Funktionen 14 Tage gratis. Es wird nichts automatisch abgebucht. Danach schaltest du Pro mit einem Einmalkauf frei.",
+    "pro.days": "Tage gratis", "pro.price": "6,99 €", "pro.once": "einmalig, kein Abo",
+    "pro.l1": "Wegzeit und ein Hinweis, wann du losmusst", "pro.l2": "Zweite Zeitzone",
+    "pro.l3": "Suche und Antworten auf Einladungen", "pro.l4": "Google Meet und Gäste beim Erstellen von Terminen",
+    "pro.l5": "Tagesübersicht zur Uhrzeit deiner Wahl",
+    "pro.n1.t": "Zeit zum Aufbruch: Mittagessen mit Ana", "pro.n1.b": "26 Min. zu Fuß · beginnt um 17:15", "pro.n1.a": "Route öffnen",
+    "pro.n2.t": "Heute: 4 Termine", "pro.n2.more": "+ 1 weiterer Termin",
+    "priv.text": "Kein Account. Keine Werbung. Kein Tracking. Termin sammelt keine Daten. Dein Kalender bleibt auf deinem Mac.",
+    "final.title": "Nie wieder zu spät<br><em>zum Meeting.</em>",
+    "final.lead": "Gratis im Mac App Store. Termin Pro 14 Tage gratis.",
+    "final.req": "Erfordert macOS 14 oder neuer.",
+    "foot.support": "Support", "foot.privacy": "Datenschutz", "foot.contact": "Kontakt",
+    "ct.role": "Entwickler von Termin", "ct.title": "Schreib mir",
+    "ct.lead": "Eine Frage, eine Idee oder ein Problem mit Termin? Schreib hier, und ich antworte persönlich, meist innerhalb weniger Tage.",
+    "ct.name": "Name", "ct.email": "E-Mail", "ct.msg": "Nachricht", "ct.send": "Nachricht senden",
+    "ct.sending": "Wird gesendet …", "ct.ok": "Danke! Deine Nachricht wurde gesendet.", "ct.err": "Senden hat nicht geklappt. Bitte versuch es gleich noch einmal.",
+    "ct.missing": "Bitte gib deinen Namen, eine gültige E-Mail und die Nachricht ein.",
+    "minutes": m => `in ${m} Min.`, "now": "jetzt", "title": "Termin – Dein nächstes Meeting in der Menüleiste des Mac",
+  };
   const PT = {
     "minutes": m => `em ${m} min`, "now": "agora", "title": document.title,
     "ct.sending": "Enviando…", "ct.ok": "Obrigado! Sua mensagem foi enviada.", "ct.err": "Não foi possível enviar. Tente de novo daqui a pouco.",
@@ -64,28 +110,31 @@
   $$("[data-i18n]").forEach(el => { PT[el.dataset.i18n] ??= el.textContent; });
   $$("[data-i18n-html]").forEach(el => { PT[el.dataset.i18nHtml] = el.innerHTML; });
 
+  const LANGS = { pt: PT, en: EN, de: DE };
+  const HTML_LANG = { pt: "pt-BR", en: "en", de: "de" };
   let lang;
   try { lang = localStorage.getItem("termin-lang"); } catch {}
-  lang ||= navigator.language.toLowerCase().startsWith("pt") ? "pt" : "en";
+  if (!LANGS[lang]) lang = { pt: "pt", de: "de" }[navigator.language.slice(0, 2).toLowerCase()] || "en";
   // Links de contato das páginas de suporte e privacidade já dizem o idioma
-  if (location.hash === "#contato") lang = "pt";
-  if (location.hash === "#contact") lang = "en";
-  const t = key => (lang === "en" ? EN : PT)[key];
+  const HASH_LANG = { "#contato": "pt", "#contact": "en", "#kontakt": "de" };
+  if (HASH_LANG[location.hash]) lang = HASH_LANG[location.hash];
+  const t = key => LANGS[lang][key] ?? PT[key];
 
   function applyLang() {
-    document.documentElement.lang = lang === "en" ? "en" : "pt-BR";
+    document.documentElement.lang = HTML_LANG[lang];
     document.title = t("title");
     $$("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
     $$("[data-i18n-html]").forEach(el => { el.innerHTML = t(el.dataset.i18nHtml); });
-    $(".lang").textContent = lang === "en" ? "PT" : "EN";
+    $(".lang").value = lang;
     splitWords();
     placePerks();
     lastMinute = null;
     update();
   }
-  $(".lang").addEventListener("click", () => {
-    lang = lang === "en" ? "pt" : "en";
+  $(".lang").addEventListener("change", e => {
+    lang = e.target.value;
     try { localStorage.setItem("termin-lang", lang); } catch {}
+    stat("Trocou idioma", { para: lang });
     applyLang();
   });
 
@@ -113,7 +162,7 @@
   contact.addEventListener("click", e => { if (e.target === contact) contact.close(); });
   // termin-app.com/#contato (ou #contact) abre o formulário direto
   const openFromHash = () => {
-    if (!/^#conta(to|ct)$/.test(location.hash) || contact.open) return;
+    if (!HASH_LANG[location.hash] || contact.open) return;
     contact.showModal();
     stat("Abriu contato", { local: "link" });
   };
