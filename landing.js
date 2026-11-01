@@ -102,6 +102,52 @@
     "ct.missing": "Bitte gib deinen Namen, eine gültige E-Mail und die Nachricht ein.",
     "minutes": m => `in ${m} Min.`, "now": "jetzt", "title": "Termin – Dein nächstes Meeting in der Menüleiste des Mac",
   };
+  const ES = {
+    "nav.features": "Funciones", "nav.privacy": "Privacidad", "cta.short": "Descargar",
+    "cta.store": "Descargar en el App Store",
+    "hero.eyebrow": "Para Mac · Gratis en el App Store",
+    "hero.t1": "Tu próxima reunión.", "hero.t2": "Siempre a la vista.",
+    "hero.lead": "<b>Termin</b> pone tu agenda en la barra de menús del Mac, para que siempre sepas qué viene después y cuánto tiempo te queda.",
+    "hero.more": "Ver cómo funciona",
+    "hero.p1": "Próxima reunión en la barra de menús", "hero.p2": "Resumen del día en una notificación",
+    "hero.p3": "Aviso de cuándo salir hacia el evento", "hero.p4": "Dos zonas horarias",
+    "hero.p5": "Únete a la reunión con 1 clic",
+    "cd.eyebrow": "De un vistazo", "cd.title": "Desplázate por la página.<br><em>El tiempo pasa.</em>",
+    "cd.date": "jue, 29 oct", "cd.day": "jue 29 oct", "cd.toast": "Empieza en 1 minuto", "cd.join": "Unirse",
+    "cd.caption": "Tu próxima reunión y la cuenta regresiva en la barra de menús. Un minuto antes, un aviso con el botón “Unirse” que abre la llamada.",
+    "s1.t": "Hoy, mañana y los próximos días", "s1.p": "Haz clic en la barra de menús para ver todo el mes y todos tus eventos. Funciona con todos los calendarios de tu Mac.",
+    "s2.t": "Sabe cuándo salir", "s2.p": "Cuánto tardas en llegar a cada evento en auto, transporte público o a pie, y un aviso cuando es hora de salir.",
+    "s3.t": "Encuentra cualquier evento", "s3.p": "Busca por título o participante y responde a las invitaciones sin abrir otra app.",
+    "s4.t": "Crea eventos en segundos", "s4.p": "Con enlace de Google Meet, invitados, aviso y una segunda zona horaria, desde la barra de menús.",
+    "g.t1": "Hecho para el Mac.", "g.t2": "Al estilo del Mac.",
+    "g.c1": "El menú, con el mes y tu agenda", "g.c2": "Dirección, ruta y cuándo salir",
+    "g.c3": "Búsqueda instantánea", "g.c4": "Nuevo evento con dos zonas horarias",
+    "b.eyebrow": "Todo a un clic", "b.title": "Pequeño en la barra.<br><em>Grande en tu día.</em>",
+    "b.tz.t": "Segunda zona horaria", "b.tz.p": "La hora de otra ciudad en el reloj, en tus eventos y al crear eventos.",
+    "b.join.t": "Únete con un clic", "b.join.p": "Termin encuentra el enlace de la llamada en el evento: Zoom, Meet, Teams, Whereby y otros.",
+    "b.map.t": "El lugar en Mapas", "b.map.p": "Abre la dirección en Mapas, envía un correo a los participantes o abre tu app de calendario favorita.",
+    "b.cal.t": "Todos tus calendarios", "b.cal.p": "iCloud, Google, Outlook, Exchange y más, los mismos de la app Calendario.",
+    "b.theme.t": "Claro y oscuro", "b.theme.p": "Sigue la apariencia de tu Mac y se abre con él, si quieres.",
+    "pro.title": "Cómpralo una vez.<br><em>Úsalo para siempre.</em>",
+    "pro.lead": "Prueba todas las funciones Pro gratis durante 14 días. No se cobra nada automáticamente. Después, desbloquea Pro con una compra única.",
+    "pro.days": "días gratis", "pro.price": "6,99 €", "pro.once": "una vez, sin suscripción",
+    "pro.l1": "Tiempo de desplazamiento y aviso de cuándo salir", "pro.l2": "Segunda zona horaria",
+    "pro.l3": "Búsqueda y respuesta a invitaciones", "pro.l4": "Google Meet e invitados al crear eventos",
+    "pro.l5": "Resumen del día a la hora que elijas",
+    "pro.n1.t": "Hora de salir: Almuerzo con Ana", "pro.n1.b": "26 min a pie · empieza a las 17:15", "pro.n1.a": "Abrir ruta",
+    "pro.n2.t": "Hoy: 4 eventos", "pro.n2.more": "+ 1 evento más",
+    "priv.text": "Sin cuenta. Sin anuncios. Sin rastreo. Termin no recopila ningún dato. Tu agenda se queda en tu Mac.",
+    "final.title": "Nunca más llegues tarde<br><em>a una reunión.</em>",
+    "final.lead": "Gratis en el Mac App Store. Termin Pro gratis durante 14 días.",
+    "final.req": "Requiere macOS 14 o posterior.",
+    "foot.support": "Soporte", "foot.privacy": "Privacidad", "foot.contact": "Contacto",
+    "ct.role": "Creador de Termin", "ct.title": "Escríbeme",
+    "ct.lead": "¿Una duda, una idea o un problema con Termin? Escribe aquí y te respondo personalmente, normalmente en pocos días.",
+    "ct.name": "Nombre", "ct.email": "Correo", "ct.msg": "Mensaje", "ct.send": "Enviar mensaje",
+    "ct.sending": "Enviando…", "ct.ok": "¡Gracias! Tu mensaje se envió.", "ct.err": "No se pudo enviar. Inténtalo de nuevo en un momento.",
+    "ct.missing": "Escribe tu nombre, un correo válido y el mensaje.",
+    "minutes": m => `en ${m} min`, "now": "ahora", "title": "Termin – Tu próxima reunión en la barra de menús del Mac",
+  };
   const PT = {
     "minutes": m => `em ${m} min`, "now": "agora", "title": document.title,
     "ct.sending": "Enviando…", "ct.ok": "Obrigado! Sua mensagem foi enviada.", "ct.err": "Não foi possível enviar. Tente de novo daqui a pouco.",
@@ -110,13 +156,13 @@
   $$("[data-i18n]").forEach(el => { PT[el.dataset.i18n] ??= el.textContent; });
   $$("[data-i18n-html]").forEach(el => { PT[el.dataset.i18nHtml] = el.innerHTML; });
 
-  const LANGS = { pt: PT, en: EN, de: DE };
-  const HTML_LANG = { pt: "pt-BR", en: "en", de: "de" };
+  const LANGS = { pt: PT, en: EN, de: DE, es: ES };
+  const HTML_LANG = { pt: "pt-BR", en: "en", de: "de", es: "es" };
   let lang;
   try { lang = localStorage.getItem("termin-lang"); } catch {}
-  if (!LANGS[lang]) lang = { pt: "pt", de: "de" }[navigator.language.slice(0, 2).toLowerCase()] || "en";
+  if (!LANGS[lang]) lang = { pt: "pt", de: "de", es: "es" }[navigator.language.slice(0, 2).toLowerCase()] || "en";
   // Links de contato das páginas de suporte e privacidade já dizem o idioma
-  const HASH_LANG = { "#contato": "pt", "#contact": "en", "#kontakt": "de" };
+  const HASH_LANG = { "#contato": "pt", "#contact": "en", "#kontakt": "de", "#contacto": "es" };
   if (HASH_LANG[location.hash]) lang = HASH_LANG[location.hash];
   const t = key => LANGS[lang][key] ?? PT[key];
 
