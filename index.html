@@ -12,7 +12,7 @@
 <link rel="canonical" href="https://termin-app.com/">
 <meta name="theme-color" content="#fbfbfd">
 <link rel="icon" href="img/icon.png">
-<link rel="stylesheet" href="landing.css?v=18">
+<link rel="stylesheet" href="landing.css?v=19">
   <!-- Umami: estatísticas do site, sem cookies; só conta em termin-app.com -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="2b78b34d-9ec8-4ce2-b9a3-627e3583dc4f" data-domains="termin-app.com"></script>
 </head>
@@ -84,7 +84,14 @@
       <div class="card join reveal">
         <h3 data-i18n="b.join.t">Entre com um clique</h3>
         <p data-i18n="b.join.p">O Termin encontra o link da chamada no evento: Zoom, Meet, Teams, Whereby e outros.</p>
-        <div class="join-demo"><span class="cam"></span><span class="join-pill" data-i18n="cd.join">Entrar</span></div>
+        <!-- Um evento como aparece no menu do Termin, com o botão de entrar na chamada -->
+        <div class="join-demo">
+          <span class="join-bar"></span>
+          <span class="join-event"><b>15:00</b> · Design review</span>
+          <svg class="join-cam" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="13" height="12" rx="3"/><path d="M15.5 10.5l5-3v9l-5-3z"/></svg>
+          <span class="join-pill" data-i18n="cd.join">Entrar</span>
+        </div>
+        <div class="chips"><span>Zoom</span><span>Google Meet</span><span>Teams</span><span>Whereby</span></div>
       </div>
       <div class="card detail reveal">
         <img src="img/deslocamento-detalhe.webp" alt="" loading="lazy">
