@@ -148,6 +148,52 @@
     "ct.missing": "Escribe tu nombre, un correo válido y el mensaje.",
     "minutes": m => `en ${m} min`, "now": "ahora", "title": "Termin – Tu próxima reunión en la barra de menús del Mac",
   };
+  const IT = {
+    "nav.features": "Funzioni", "nav.privacy": "Privacy", "cta.short": "Scarica",
+    "cta.store": "Scarica dall’App Store",
+    "hero.eyebrow": "Per Mac · Gratis sull’App Store",
+    "hero.t1": "La prossima riunione.", "hero.t2": "Sempre in vista.",
+    "hero.lead": "<b>Termin</b> mette il tuo calendario nella barra dei menu del Mac, così sai sempre cosa viene dopo e quanto tempo ti resta.",
+    "hero.more": "Scopri come funziona",
+    "hero.p1": "Prossima riunione nella barra dei menu", "hero.p2": "Riepilogo del giorno in una notifica",
+    "hero.p3": "Avviso di quando uscire per l’evento", "hero.p4": "Due fusi orari",
+    "hero.p5": "Partecipa alla riunione con 1 clic",
+    "cd.eyebrow": "A colpo d’occhio", "cd.title": "Scorri la pagina.<br><em>Il tempo passa.</em>",
+    "cd.date": "gio 29 ott", "cd.day": "gio 29 ott", "cd.toast": "Inizia tra 1 minuto", "cd.join": "Partecipa",
+    "cd.caption": "La prossima riunione e il conto alla rovescia direttamente nella barra dei menu. Un minuto prima, un avviso con il pulsante “Partecipa” che apre la chiamata.",
+    "s1.t": "Oggi, domani e i prossimi giorni", "s1.p": "Fai clic sulla barra dei menu per vedere tutto il mese e tutti i tuoi eventi. Funziona con tutti i calendari del tuo Mac.",
+    "s2.t": "Sai quando uscire", "s2.p": "Quanto ci vuole per arrivare a ogni evento in auto, con i mezzi o a piedi, e un avviso quando è ora di uscire.",
+    "s3.t": "Trova qualsiasi evento", "s3.p": "Cerca per titolo o partecipante e rispondi agli inviti senza aprire un’altra app.",
+    "s4.t": "Crea eventi in pochi secondi", "s4.p": "Con link di Google Meet, invitati, avviso e un secondo fuso orario, direttamente dalla barra dei menu.",
+    "g.t1": "Fatto per il Mac.", "g.t2": "Come un Mac.",
+    "g.c1": "Il menu, con il mese e i tuoi impegni", "g.c2": "Indirizzo, percorso e quando uscire",
+    "g.c3": "Ricerca istantanea", "g.c4": "Nuovo evento con due fusi orari",
+    "b.eyebrow": "Tutto a portata di clic", "b.title": "Piccolo nella barra.<br><em>Grande nella giornata.</em>",
+    "b.tz.t": "Secondo fuso orario", "b.tz.p": "L’ora di un’altra città nell’orologio, negli eventi e quando crei eventi.",
+    "b.join.t": "Partecipa con un clic", "b.join.p": "Termin trova il link della chiamata nell’evento: Zoom, Meet, Teams, Whereby e altri.",
+    "b.map.t": "Il luogo in Mappe", "b.map.p": "Apri l’indirizzo in Mappe, invia un’e-mail ai partecipanti o apri la tua app di calendario preferita.",
+    "b.cal.t": "Tutti i tuoi calendari", "b.cal.p": "iCloud, Google, Outlook, Exchange e altri, gli stessi dell’app Calendario.",
+    "b.theme.t": "Chiaro e scuro", "b.theme.p": "Segue l’aspetto del tuo Mac e si apre insieme a lui, se vuoi.",
+    "pro.title": "Compralo una volta.<br><em>Usalo per sempre.</em>",
+    "pro.lead": "Prova tutte le funzioni Pro gratis per 14 giorni. Non viene addebitato nulla automaticamente. Poi sblocca Pro con un acquisto unico.",
+    "pro.days": "giorni gratis", "pro.price": "6,99 €", "pro.once": "una volta, nessun abbonamento",
+    "pro.l1": "Tempo di spostamento e avviso di quando uscire", "pro.l2": "Secondo fuso orario",
+    "pro.l3": "Ricerca e risposta agli inviti", "pro.l4": "Google Meet e invitati quando crei eventi",
+    "pro.l5": "Riepilogo del giorno all’orario che scegli",
+    "pro.n1.t": "Ora di uscire: Pranzo con Ana", "pro.n1.b": "26 min a piedi · inizia alle 17:15", "pro.n1.a": "Apri percorso",
+    "pro.n2.t": "Oggi: 4 eventi", "pro.n2.more": "+ 1 altro evento",
+    "priv.text": "Nessun account. Nessuna pubblicità. Nessun tracciamento. Termin non raccoglie alcun dato. Il tuo calendario resta sul tuo Mac.",
+    "final.title": "Mai più in ritardo<br><em>a una riunione.</em>",
+    "final.lead": "Gratis sul Mac App Store. Termin Pro gratis per 14 giorni.",
+    "final.req": "Richiede macOS 14 o successivo.",
+    "foot.support": "Supporto", "foot.privacy": "Privacy", "foot.contact": "Contatti",
+    "ct.role": "Creatore di Termin", "ct.title": "Scrivimi",
+    "ct.lead": "Una domanda, un’idea o un problema con Termin? Scrivi qui e ti rispondo personalmente, di solito in pochi giorni.",
+    "ct.name": "Nome", "ct.email": "E-mail", "ct.msg": "Messaggio", "ct.send": "Invia messaggio",
+    "ct.sending": "Invio in corso…", "ct.ok": "Grazie! Il tuo messaggio è stato inviato.", "ct.err": "Invio non riuscito. Riprova tra un momento.",
+    "ct.missing": "Inserisci il tuo nome, un’e-mail valida e il messaggio.",
+    "minutes": m => `tra ${m} min`, "now": "ora", "title": "Termin – La prossima riunione nella barra dei menu del Mac",
+  };
   const PT = {
     "minutes": m => `em ${m} min`, "now": "agora", "title": document.title,
     "ct.sending": "Enviando…", "ct.ok": "Obrigado! Sua mensagem foi enviada.", "ct.err": "Não foi possível enviar. Tente de novo daqui a pouco.",
@@ -156,13 +202,13 @@
   $$("[data-i18n]").forEach(el => { PT[el.dataset.i18n] ??= el.textContent; });
   $$("[data-i18n-html]").forEach(el => { PT[el.dataset.i18nHtml] = el.innerHTML; });
 
-  const LANGS = { pt: PT, en: EN, de: DE, es: ES };
-  const HTML_LANG = { pt: "pt-BR", en: "en", de: "de", es: "es" };
+  const LANGS = { pt: PT, en: EN, de: DE, es: ES, it: IT };
+  const HTML_LANG = { pt: "pt-BR", en: "en", de: "de", es: "es", it: "it" };
   let lang;
   try { lang = localStorage.getItem("termin-lang"); } catch {}
-  if (!LANGS[lang]) lang = { pt: "pt", de: "de", es: "es" }[navigator.language.slice(0, 2).toLowerCase()] || "en";
+  if (!LANGS[lang]) lang = { pt: "pt", de: "de", es: "es", it: "it" }[navigator.language.slice(0, 2).toLowerCase()] || "en";
   // Links de contato das páginas de suporte e privacidade já dizem o idioma
-  const HASH_LANG = { "#contato": "pt", "#contact": "en", "#kontakt": "de", "#contacto": "es" };
+  const HASH_LANG = { "#contato": "pt", "#contact": "en", "#kontakt": "de", "#contacto": "es", "#contatti": "it" };
   if (HASH_LANG[location.hash]) lang = HASH_LANG[location.hash];
   const t = key => LANGS[lang][key] ?? PT[key];
 
